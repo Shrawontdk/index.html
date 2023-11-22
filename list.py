@@ -72,7 +72,8 @@ def run_math_quiz(num_questions):
 # Main program
 if __name__ == "__main__":
     print("Welcome to the Math Quiz!\n")
-    num_questions = 2 # You can change the number of questions here
+    num_questions = 3
+     # You can change the number of questions here
     user_score = run_math_quiz(num_questions)
 
     print(f"You got {user_score} out of {num_questions} questions correct.")

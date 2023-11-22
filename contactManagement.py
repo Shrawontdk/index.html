@@ -17,11 +17,14 @@ def view_contacts():
         for contact in contacts:
             print(f"Name: {contact['Name']}, Phone: {contact['Phone']},  Mail: {contact['Mail']}") 
 
-def search_contact():
-    name = input("Enter your Name: ")
+def search_contact(name):
+    con_found= False
     for contact in contacts:
         if contact['Name']== name:
+             print("Contact Found: ")
              print(f"Name: {contact['Name']}, Phone: {contact['Phone']}, Mail: {contact['Mail']}") 
+             con_found= True
+             break
         else:
             print("There is no contact in this name")
 
@@ -49,7 +52,8 @@ if __name__ == "__main__":
         elif choice == "2":
             view_contacts()
         elif choice == "3":
-            search_contact()
+            name = input("Enter your Name: ")
+            search_contact(name)
 
             
         elif choice == "4":
